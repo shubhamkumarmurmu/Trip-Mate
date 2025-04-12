@@ -58,7 +58,7 @@ function Form() {
      setDatas(response.data.placesData);
      setPlaces(response.data.pointsArray);
     //  console.log(datas)
-    //  console.log(place)
+    
 
      
      } catch (err) {
