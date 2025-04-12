@@ -1,9 +1,7 @@
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
 import Form from './pages/form'
-import { Layout } from 'lucide-react'
-import DestinationsForm from './components/destinationsFrom'
-import Itenary from './pages/Itenary'
+
 
 
 const App = () => {
