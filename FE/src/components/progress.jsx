@@ -1,5 +1,4 @@
 import React from 'react'
-import { MapPin, Calendar, Users, Compass, ChevronDown } from 'lucide-react';
 
 const Progress = ({steps,currentStep}) => {
     console.log(steps)
