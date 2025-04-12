@@ -1,6 +1,6 @@
 import React, { useState,useCallback } from "react";
 
-const AutoComponent = () => {
+const AutoComplete = () => {
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const handleInput = useCallback(
@@ -44,4 +44,4 @@ const AutoComponent = () => {
   );
 };
 
-export default AutoComponent;
+export default AutoComplete;

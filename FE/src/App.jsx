@@ -1,11 +1,15 @@
+import React from 'react'
+import {Routes,Route} from 'react-router-dom'
+import Form from './pages/form'
+import { Layout } from 'lucide-react'
+import DestinationsForm from './components/destinationsFrom'
 
 
-
-function App() {
-
-
+const App = () => {
   return (
-<div className='font-bold text-center'>hello</div>
+    <Routes>
+       <Route path='/' element={<Form/>}></Route>
+    </Routes>
   )
 }
 
