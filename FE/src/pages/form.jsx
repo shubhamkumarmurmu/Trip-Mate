@@ -26,8 +26,20 @@ function Form() {
    
     duration: ''
   });
+  const [datas,setDatas]=useState([]);
+  const [place,setPlaces]=useState([]);
+ 
+  //showing map
+  const showmap=()=>{
+        navigate('/itenary', {state: {datas,place}});
+  }
+ 
 
-
+  //changing datas arr and place arr
+  useEffect(()=>{
+  console.log(datas)
+  console.log(place)
+  },[datas,place])
   //calling for navigate to itenary 
   const trynav=async()=>{
    console.log("trynav")
@@ -43,10 +55,12 @@ function Form() {
          },
        });
       
-     const datas= response.data.placesData;
-     const place=response.data.pointsArray;
+     setDatas(response.data.placesData);
+     setPlaces(response.data.pointsArray);
+    //  console.log(datas)
+    //  console.log(place)
 
-       navigate('/itenary', {state: {datas,place}});
+     
      } catch (err) {
        console.error(err);
      
@@ -58,9 +72,12 @@ function Form() {
   //updating data
   useEffect(()=>{
     console.log('Updated data:', data);
-    //  if(currentStep==3){
-    //   trynav();
-    //  }
+     if(currentStep==3){
+      trynav();
+     }
+     if(currentStep==5){
+      showmap();
+     }
   },[data])
 
   const steps = [
