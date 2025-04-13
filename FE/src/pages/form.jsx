@@ -89,7 +89,7 @@ function Form() {
 
 
   //calling for next continue
-  const onContinue=async()=>{
+  const onContinue=()=>{
 
     setCurrentStep(currentStep+1);
     console.log(currentStep);
@@ -166,21 +166,35 @@ function Form() {
 
       </div>
     </div>
-    <div className="mt-8 flex mx-auto">
-    <button
-          className="w-[50px] text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
-          onClick={onBack}
-        >
-          Back
-        </button>
-        <button
-          className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
-          onClick={onContinue}
-        >
-          Continue
-        </button>
+    <div className="max-w-4xl mx-auto pt-12 px-4 flex justify-between mb-5">
+       {currentStep==1 
+       ?
+       <div></div>: <button
+       className="px-5 py-1 rounded bg-gray-300"
+       onClick={onBack}
+     >
+       Back
+     </button>
+       }
+       
+       {currentStep==4
+       ?<button
+       className="px-5 py-1 rounded bg-blue-200"
+       onClick={onContinue}
+     >
+       create Itenary
+     </button> 
+     :
+     <button
+     className="px-5 py-1 rounded bg-blue-200"
+     onClick={onContinue}
+   >
+     Continue
+   </button>
+      }
+       
       </div>
-    <Footer/>
+    
     </>
   );
 }

@@ -96,7 +96,8 @@ const Itenary = () => {
    const days=location.state.datas;
    console.log(days);
    const place=location.state.place;
-  const places=place.filter(obj => Object.keys(obj).length > 0);
+  const places=place.filter(obj => Object.keys(obj).length == 3);
+  
 
    console.log(places);
    
@@ -132,37 +133,21 @@ const Itenary = () => {
 
   return (
     <div>
-      {/* <div>
-        <button className='border rounded px-3 py-2' onClick={makePdf}>download as pdf</button>
-      </div> */}
+       {/* <div className='sticky top-0 z-5 bg-white py-4 '>
+        <div className='W-1/2 flex justify-between'>
+        <button className='px-3 py-1 bg-blue'>Hotels</button>
+        <button className='px-3 py-1 bg-blue'>Gallery</button>
+        <button className='px-3 py-1 bg-blue'>Events</button>
+        </div>
+        
+       </div> */}
     <div className='flex  md:flex-row flex-col'>
     <div className="flex flex-wrap justify-center md:w-1/2">
       {days.map((day, index) => (
         <DayCard key={index} day={day} />
       ))}
 
-      <div>
-        <button onClick={imgagecall}>hello</button>
-        {
-          istrue ?
 
-          <div>
-            {
-            myarr.map((imgarr)=>{
-              return (
-                <Imagecard imgarr={imgarr}/>
-              )
-            })
-           
-          }
-          </div>
-       
-        :
-        <div></div>
-        }
-
-    
-      </div>
     </div>
       <div className='map-container h-[100vh] md:w-1/2 w-full  py-4 shadow-lg mx-2 mr-2 lg:fixed lg:right-0'>
         <MapView places={places}/>
