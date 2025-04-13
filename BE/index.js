@@ -11,6 +11,9 @@ const dotenv = require('dotenv').config({path: '/home/saidarshan74/Desktop/Tripm
 // console.log(PORT)
 
 app.use(cors())
+// app.use(cors({
+//     origin: '*', // Allows all IP addresses and domains
+//   }));
 app.use(bodyParser.json());
 
 app.use('/discover',mainRoutes)
@@ -20,3 +23,5 @@ app.use('/discover',mainRoutes)
 app.listen(PORT,()=>{
     console.log(`hmmmm running on port  ${PORT}`)
 })
+
+
