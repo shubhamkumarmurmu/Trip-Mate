@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
 import Form from './pages/form'
-
+import Itenary from './pages/Itenary.jsx'
 
 
 const App = () => {
