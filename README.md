@@ -1,5 +1,7 @@
 ## Trip-Mate
 
+## [PLEASE WATCH OUT DEMO VIDEO WE ARE UNABLE TO UPLOAD THE VIDEO ON UNSTOP](https://youtu.be/4TcvP9F9zwQ)
+
     Welcome to the AI-Powered Travel Planner application! This Full Stack React Native app, developed during my learning journey, leverages advanced AI to offer personalized travel recommendations and seamless trip management, ensuring a hassle-free travel experience.
 
 
